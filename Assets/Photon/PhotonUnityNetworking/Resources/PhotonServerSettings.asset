@@ -34,5 +34,7 @@ MonoBehaviour:
   - RPC_CreatePlayer
   - RPC_LoadedGameScene
   - CreateTile
+  - RPC_CreateMap
+  - RPC_DeactivateMapGen
   DisableAutoOpenWizard: 1
   ShowSettings: 0

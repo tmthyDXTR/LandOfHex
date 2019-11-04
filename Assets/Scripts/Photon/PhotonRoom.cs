@@ -11,6 +11,7 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
     private PhotonView PV;
 
     public bool isGameLoaded;
+    public bool isMapLoaded;
     public int currentScene;
 
     //Player info
@@ -44,6 +45,7 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
         }
         DontDestroyOnLoad(this.gameObject);
         PV = GetComponent<PhotonView>();
+
     }
 
     public override void OnEnable()
@@ -208,6 +210,8 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
     [PunRPC]
     private void RPC_CreatePlayer()
     {
-        //PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonNetworkPlayer"), transform.position, Quaternion.identity, 0);
+        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonNetworkPlayer"), transform.position, Quaternion.identity, 0);
     }
+
+    
 }

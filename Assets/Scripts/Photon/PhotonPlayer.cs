@@ -13,19 +13,17 @@ public class PhotonPlayer : MonoBehaviour
         if (PV.IsMine)
         {
             // First player spawns
-            int spawn;
             if (PV.ViewID == (int)1001)
             {
-                spawn = 0;
-                CreateAvatar(spawn);
-                //PV.RPC("SetPlayerName", RpcTarget.AllBuffered, "Player1");
+                //CreateMap();
+                CreateAvatar(0);
 
             }
             // Secondd player at right spawn point
             else
             {
-                spawn = 1;
-                CreateAvatar(spawn);
+                CreateAvatar(1);
+                PhotonNetwork.Instantiate("MapGenerator", this.transform.position, Quaternion.identity);
                 //PV.RPC("SetPlayerName", RpcTarget.AllBuffered, "Player2");
             }
         }
@@ -41,11 +39,16 @@ public class PhotonPlayer : MonoBehaviour
 
     private void CreateAvatar(int spawn)
     {
-        myAvatar = PhotonNetwork.Instantiate(Path.Combine("Resources", "PlayerAvatar"),
-                        GameSetup.GS.spawnPoints[spawn].position,
+        Debug.Log("Create Avatar");
+        myAvatar = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerAvatar"),
+                        /*GameSetup.GS.spawnPoints[spawn].position*/ this.transform.position,
                         Quaternion.identity,
                         0);
         myAvatar.name = "myAvatar";
     }
-
+    private void CreateMap()
+    {
+        Debug.Log("Create Map");
+        //PV.RPC("RPC_CreateMap", RpcTarget.All);
+    }
 }

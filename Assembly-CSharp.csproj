@@ -63,12 +63,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\APMenu.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraHandler.cs" />
+    <Compile Include="Assets\Scripts\GameHandler.cs" />
     <Compile Include="Assets\Scripts\GameSetup.cs" />
+    <Compile Include="Assets\Scripts\GameState.cs" />
     <Compile Include="Assets\Scripts\MapGenerator.cs" />
+    <Compile Include="Assets\Scripts\MenuHandler.cs" />
     <Compile Include="Assets\Scripts\Photon\MultiplayerSettings.cs" />
     <Compile Include="Assets\Scripts\Photon\PhotonLobby.cs" />
     <Compile Include="Assets\Scripts\Photon\PhotonPlayer.cs" />
     <Compile Include="Assets\Scripts\Photon\PhotonRoom.cs" />
+    <Compile Include="Assets\Scripts\Selectable.cs" />
+    <Compile Include="Assets\Scripts\Selection.cs" />
+    <Compile Include="Assets\Scripts\SelectTile.cs" />
+    <Compile Include="Assets\Scripts\TileInfo.cs" />
+    <Compile Include="Assets\Scripts\TileScripts\Forest.cs" />
+    <Compile Include="Assets\Scripts\TileScripts\Grassland.cs" />
+    <Compile Include="Assets\Scripts\TileScripts\Mountain.cs" />
+    <Compile Include="Assets\Scripts\TileScripts\Water.cs" />
+    <Compile Include="Assets\Scripts\UIHandler.cs" />
+    <Compile Include="Assets\Scripts\UnitEffectRadius.cs" />
+    <Compile Include="Assets\Scripts\UnitHitBox.cs" />
+    <Compile Include="Assets\Scripts\UnitInfo.cs" />
     <None Include="Assets\Low Poly Hexagons\Assets\UniformOutline.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
